@@ -46,6 +46,26 @@ Invoke Chronos Watcher with `chronos`, make sure you have root priviledges when 
 
 See the included manpage for more information.
 
+Documentation
+-------------
+
+This software includes a manpage, chronos.8, for your convenience. It has to be installed in the appropriate directory.
+
+Run the following command as root
+```bash
+install -g 0 -o 0 -m 0644 chronos.8 /usr/share/man/man8
+```
+
+You should now be able to access it by doing
+```bash
+man chronos
+```
+
+Alternatively, if you don't wish to go through the trouble of installing it, you can still view it by giving `man` the path to the manpage file.
+```bash
+man ./chronos.8
+```
+
 License
 -------
 
