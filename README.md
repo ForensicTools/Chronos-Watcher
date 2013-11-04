@@ -1,7 +1,7 @@
-Chronos-Watcher
+Chronos Watcher
 ===============
 
-Real time monitoring of file system activity, accomplished by intercepting syscalls responsible for opening and editing files.
+Efficient, real time monitoring of file system activity, accomplished by intercepting syscalls responsible for opening and editing files.
 
 This tool has potential for forensic and anti-forensic applications: bring your own hat. :)
 
@@ -49,7 +49,7 @@ See the included manpage for more information.
 Documentation
 -------------
 
-This software includes a manpage, chronos.8, for your convenience. It has to be installed in the appropriate directory.
+This software includes a manpage, chronos.8. It should be installed in the manpage directory for ease of use.
 
 Run the following command as root
 ```bash
