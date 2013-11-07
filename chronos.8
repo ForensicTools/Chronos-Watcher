@@ -1,0 +1,57 @@
+.\" This manpage should exist in /usr/share/man/man8/chronos.8
+.\" Install with the following command (run as root):
+.\" install -g 0 -o 0 -m 0644 chronos.8 /usr/share/man/man8
+.\" Contact vlad@vladionescu.com or joem3921@gmail.com
+.TH chronos 8 "03 November 2013" ".1" "Chronos Watcher"
+.SH NAME
+chronos \- Watches for file system activity in real time
+.SH SYNOPSIS
+.B chronos
+.SH AVAILABILITY
+.B chronos
+only works on Mac OS X 10.8.5 at this time.
+.SH DESCRIPTION
+This tool must be run as root, because it is a rootkit and needs superuser priviledges.
+
+.B Chronos Watcher
+works by intercepting the syscalls for opening and saving files, and saves the MAC times in memory before allowing the original syscall to complete and modify the metadata of the file (specifically the MAC times).
+
+A log file (times.log) is generated in the same directory
+.B chronos
+is run from and is updated in realtime with a timeline of file system changes. Monitor this log file with something like
+.B tail -f
+\. This is the forensic application of this tool.
+
+Upon exit,
+.B chronos
+will allow you to revert all of the MAC times of all files that were touched during that
+.B Chronos Watcher
+session. This is the anti-forensic application of this tool.
+
+This tool has potential for both monitoring and stealth applications. What you do with it is up to you: bring your own hat.
+.SH OPTIONS
+No options for this man page
+.SH FILES
+.I ./times.log
+.RS
+Log file of activity caught by
+.B chronos
+updated in realtime
+.SH SEE ALSO
+dtruss(1m)
+.SH BUGS
+No known bugs, although this program has a good chance of being detected as malware by antivirus, after all, it is a rootkit (a friendly one though!). 
+.SH AUTHOR
+Vlad Ionescu
+.RS
+vlad@vladionescu.com
+.br
+https://github.com/vladionescu
+.RE
+
+Joe Messinger
+.RS
+joem3921@gmail.com
+.br
+https://github.com/joem3921
+.RE

@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5819ECB18273EFD006381A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5819EC918273EFD006381A3 /* InfoPlist.strings */; };
+		F5819ECD18273EFD006381A3 /* Chronos_Watcher.c in Sources */ = {isa = PBXBuildFile; fileRef = F5819ECC18273EFD006381A3 /* Chronos_Watcher.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5819EC118273EFD006381A3 /* Chronos Watcher.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chronos Watcher.kext"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5819EC518273EFD006381A3 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		F5819EC818273EFD006381A3 /* Chronos Watcher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chronos Watcher-Info.plist"; sourceTree = "<group>"; };
+		F5819ECA18273EFD006381A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5819ECC18273EFD006381A3 /* Chronos_Watcher.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Chronos_Watcher.c; sourceTree = "<group>"; };
+		F5819ECE18273EFD006381A3 /* Chronos Watcher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chronos Watcher-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5819EBC18273EFD006381A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5819EB618273EFD006381A3 = {
+			isa = PBXGroup;
+			children = (
+				F5819EC618273EFD006381A3 /* Chronos Watcher */,
+				F5819EC318273EFD006381A3 /* Frameworks */,
+				F5819EC218273EFD006381A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5819EC218273EFD006381A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5819EC118273EFD006381A3 /* Chronos Watcher.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5819EC318273EFD006381A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5819EC418273EFD006381A3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5819EC418273EFD006381A3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5819EC518273EFD006381A3 /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F5819EC618273EFD006381A3 /* Chronos Watcher */ = {
+			isa = PBXGroup;
+			children = (
+				F5819ECC18273EFD006381A3 /* Chronos_Watcher.c */,
+				F5819EC718273EFD006381A3 /* Supporting Files */,
+			);
+			path = "Chronos Watcher";
+			sourceTree = "<group>";
+		};
+		F5819EC718273EFD006381A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5819EC818273EFD006381A3 /* Chronos Watcher-Info.plist */,
+				F5819EC918273EFD006381A3 /* InfoPlist.strings */,
+				F5819ECE18273EFD006381A3 /* Chronos Watcher-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F5819EBD18273EFD006381A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F5819EC018273EFD006381A3 /* Chronos Watcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5819ED118273EFD006381A3 /* Build configuration list for PBXNativeTarget "Chronos Watcher" */;
+			buildPhases = (
+				F5819EBB18273EFD006381A3 /* Sources */,
+				F5819EBC18273EFD006381A3 /* Frameworks */,
+				F5819EBD18273EFD006381A3 /* Headers */,
+				F5819EBE18273EFD006381A3 /* Resources */,
+				F5819EBF18273EFD006381A3 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chronos Watcher";
+			productName = "Chronos Watcher";
+			productReference = F5819EC118273EFD006381A3 /* Chronos Watcher.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5819EB718273EFD006381A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Vlad Ionescu";
+			};
+			buildConfigurationList = F5819EBA18273EFD006381A3 /* Build configuration list for PBXProject "Chronos Watcher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5819EB618273EFD006381A3;
+			productRefGroup = F5819EC218273EFD006381A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5819EC018273EFD006381A3 /* Chronos Watcher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5819EBE18273EFD006381A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5819ECB18273EFD006381A3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		F5819EBF18273EFD006381A3 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5819EBB18273EFD006381A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5819ECD18273EFD006381A3 /* Chronos_Watcher.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5819EC918273EFD006381A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5819ECA18273EFD006381A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5819ECF18273EFD006381A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F5819ED018273EFD006381A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F5819ED218273EFD006381A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chronos Watcher/Chronos Watcher-Prefix.pch";
+				INFOPLIST_FILE = "Chronos Watcher/Chronos Watcher-Info.plist";
+				MODULE_NAME = vladionescu.Chronos_Watcher;
+				MODULE_START = Chronos_Watcher_start;
+				MODULE_STOP = Chronos_Watcher_stop;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		F5819ED318273EFD006381A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chronos Watcher/Chronos Watcher-Prefix.pch";
+				INFOPLIST_FILE = "Chronos Watcher/Chronos Watcher-Info.plist";
+				MODULE_NAME = vladionescu.Chronos_Watcher;
+				MODULE_START = Chronos_Watcher_start;
+				MODULE_STOP = Chronos_Watcher_stop;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5819EBA18273EFD006381A3 /* Build configuration list for PBXProject "Chronos Watcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5819ECF18273EFD006381A3 /* Debug */,
+				F5819ED018273EFD006381A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5819ED118273EFD006381A3 /* Build configuration list for PBXNativeTarget "Chronos Watcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5819ED218273EFD006381A3 /* Debug */,
+				F5819ED318273EFD006381A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5819EB718273EFD006381A3 /* Project object */;
+}
