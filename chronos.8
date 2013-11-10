@@ -1,8 +1,8 @@
 .\" This manpage should exist in /usr/share/man/man8/chronos.8
 .\" Install with the following command (run as root):
-.\" install -g 0 -o 0 -m 0644 chronos.8 /usr/share/man/man8
+.\"     install -g 0 -o 0 -m 0644 chronos.8 /usr/share/man/man8
 .\" Contact vlad@vladionescu.com or joem3921@gmail.com
-.TH chronos 8 "03 November 2013" ".1" "Chronos Watcher"
+.TH chronos 8 "03 November 2013" ".1.2" "Chronos Watcher"
 .SH NAME
 chronos \- Watches for file system activity in real time
 .SH SYNOPSIS
@@ -37,6 +37,10 @@ No options for this man page
 Log file of activity caught by
 .B chronos
 updated in realtime
+.SH LIMITATIONS
+The access time is not updated if a file is opened with O_NOATIME; see open(2). In this case, 
+.B chronos 
+will not catch the file access. This is not a bug because we aren't monitoring for file access/modify, rather for MAC times changes.
 .SH SEE ALSO
 dtruss(1m)
 .SH BUGS
