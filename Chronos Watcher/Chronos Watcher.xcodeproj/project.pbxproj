@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		F5819ECB18273EFD006381A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5819EC918273EFD006381A3 /* InfoPlist.strings */; };
 		F5819ECD18273EFD006381A3 /* Chronos_Watcher.c in Sources */ = {isa = PBXBuildFile; fileRef = F5819ECC18273EFD006381A3 /* Chronos_Watcher.c */; };
+		F5DABAC91839B80300C64FFB /* idt.c in Sources */ = {isa = PBXBuildFile; fileRef = F5DABAC41839B80300C64FFB /* idt.c */; };
+		F5DABACA1839B80300C64FFB /* idt.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DABAC51839B80300C64FFB /* idt.h */; };
+		F5DABACB1839B80300C64FFB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F5DABAC61839B80300C64FFB /* main.c */; };
+		F5DABACC1839B80300C64FFB /* sysent.c in Sources */ = {isa = PBXBuildFile; fileRef = F5DABAC71839B80300C64FFB /* sysent.c */; };
+		F5DABACD1839B80300C64FFB /* sysent.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DABAC81839B80300C64FFB /* sysent.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +23,11 @@
 		F5819ECA18273EFD006381A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F5819ECC18273EFD006381A3 /* Chronos_Watcher.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Chronos_Watcher.c; sourceTree = "<group>"; };
 		F5819ECE18273EFD006381A3 /* Chronos Watcher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chronos Watcher-Prefix.pch"; sourceTree = "<group>"; };
+		F5DABAC41839B80300C64FFB /* idt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = idt.c; sourceTree = "<group>"; };
+		F5DABAC51839B80300C64FFB /* idt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idt.h; sourceTree = "<group>"; };
+		F5DABAC61839B80300C64FFB /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F5DABAC71839B80300C64FFB /* sysent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sysent.c; sourceTree = "<group>"; };
+		F5DABAC81839B80300C64FFB /* sysent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysent.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +86,24 @@
 		F5819EC718273EFD006381A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5DABAC31839B80300C64FFB /* bruteforcesysent */,
 				F5819EC818273EFD006381A3 /* Chronos Watcher-Info.plist */,
 				F5819EC918273EFD006381A3 /* InfoPlist.strings */,
 				F5819ECE18273EFD006381A3 /* Chronos Watcher-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5DABAC31839B80300C64FFB /* bruteforcesysent */ = {
+			isa = PBXGroup;
+			children = (
+				F5DABAC41839B80300C64FFB /* idt.c */,
+				F5DABAC51839B80300C64FFB /* idt.h */,
+				F5DABAC61839B80300C64FFB /* main.c */,
+				F5DABAC71839B80300C64FFB /* sysent.c */,
+				F5DABAC81839B80300C64FFB /* sysent.h */,
+			);
+			path = bruteforcesysent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +113,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DABACD1839B80300C64FFB /* sysent.h in Headers */,
+				F5DABACA1839B80300C64FFB /* idt.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5819ECD18273EFD006381A3 /* Chronos_Watcher.c in Sources */,
+				F5DABAC91839B80300C64FFB /* idt.c in Sources */,
+				F5DABACB1839B80300C64FFB /* main.c in Sources */,
+				F5DABACC1839B80300C64FFB /* sysent.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +334,7 @@
 				F5819ED318273EFD006381A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
