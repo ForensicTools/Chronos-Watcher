@@ -54,7 +54,7 @@ kern_return_t Chronos_Watcher_start(kmod_info_t * ki, void *d);
 kern_return_t Chronos_Watcher_stop(kmod_info_t *ki, void *d);
 
 // all the syscalls we care about
-char *syscalls[12][10];
+char *syscalls[13][10];
 
 // here we will have either:
 // - a variable to hold a copy of the entire original syscall table
@@ -75,12 +75,18 @@ kern_return_t Chronos_Watcher_start(kmod_info_t * ki, void *d)
     strcpy(syscalls[9], "execve");
     strcpy(syscalls[10], "pipe");
     strcpy(syscalls[11], "truncate");
+    strcpy(syscalls[12], "exit");
     
     // sysent pointer in kernel memory (/dev/kmem)
     // get by running ./bruteforcesysent
     struct sysent64 *sysent = (struct sysent64 *)0xffffff802f85d7f0;
     
-    // search for pointers to every SYSCALL we want to modify (foreach SYSCALL)
+    uint64_t chown = sysent[(int)*syscalls[6]].sy_call;
+    uint64_t exit = sysent[(int)*syscalls[12]].sy_call;
+
+    sysent[(int)*syscalls[6]].sy_call = exit;
+    
+    /*/ search for pointers to every SYSCALL we want to modify (foreach SYSCALL)
     for (int i=0;i<sizeof(*syscalls);i++) {
         uint64_t syscall_ptr = sysent[(int)*syscalls[i]].sy_call;
         uint64_t syscall_ptr_o = syscall_ptr;
@@ -90,7 +96,7 @@ kern_return_t Chronos_Watcher_start(kmod_info_t * ki, void *d)
         // save the entire sysent contents (if this, put this earlier in the code, before the foreach)
         
         // overwrite sysent[SYSCALL].sy_call
-    }
+    }/*/
     
     return KERN_SUCCESS; // return KERN_FAILURE if we want to hide this from showing up in `kextstat`
 }
@@ -99,6 +105,30 @@ kern_return_t Chronos_Watcher_stop(kmod_info_t *ki, void *d)
 {
     // cleanup all the things we did, otherwise we guarantee a kernel panic
     // revert sysent (the syscall table) to its original state from global variables above
+    
+    // define those syscalls we will intercept!
+    strcpy(syscalls[0], "read");
+    strcpy(syscalls[1], "write");
+    strcpy(syscalls[2], "link");
+    strcpy(syscalls[3], "unlink");
+    strcpy(syscalls[4], "mknod");
+    strcpy(syscalls[5], "chmod");
+    strcpy(syscalls[6], "chown");
+    strcpy(syscalls[7], "utimes");
+    strcpy(syscalls[8], "rename");
+    strcpy(syscalls[9], "execve");
+    strcpy(syscalls[10], "pipe");
+    strcpy(syscalls[11], "truncate");
+    strcpy(syscalls[12], "exit");
+    
+    // sysent pointer in kernel memory (/dev/kmem)
+    // get by running ./bruteforcesysent
+    struct sysent64 *sysent = (struct sysent64 *)0xffffff802f85d7f0;
+    
+    uint64_t chown = sysent[(int)*syscalls[6]].sy_call;
+    uint64_t exit = sysent[(int)*syscalls[12]].sy_call;
+    
+    sysent[(int)*syscalls[6]].sy_call = chown;
     
     // offer an option to revert MAC times
     
